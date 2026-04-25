@@ -3,7 +3,7 @@ import Button from "./Button";
 const ButtonTray = () => {
   return (
     <>
-      <div className=" flex h-screen items-center justify-center">
+      <div className=" flex justify-center">
         <div className="flex justify-center items-center">
           <Button color="green" text="low" />
           <Button color="yellow" text="medium" />

@@ -33,19 +33,40 @@ const Button = ({ color, text }: ButtonProps) => {
       return prevCount + 1;
     });
   };
+
+  const decrementCount = (e) => {
+    setCount(function (prevCount) {
+      if (prevCount > 0) {
+        return prevCount - 1;
+      }
+      return 0;
+    });
+  };
   return (
     <>
-      <button
-        className={`${styles.base}  text-white px-10 py-5 m-4 text-xl font-bold 
+      <div className="flex flex-col justify-center items-center">
+        <button
+          className={`${styles.base} text-white px-10 py-5 m-4 text-xl font-bold 
             drop-shadow-lg rounded-lg 
             ${styles.hover} hover:scale-105 
             active:scale-95 
             transition-all duration-150`}
-        onClick={incrementCount}
-      >
-        {text}
-      </button>
-      <div>{count}</div>
+          onClick={incrementCount}
+        >
+          {text}
+        </button>
+        <div className="flex justify-center p-4">{count}</div>
+        <button
+          className="bg-blue-400 text-white px-10 py-5 m-4 text-xl font-bold
+            rounded-lg drop-shadow-lg
+            hover:bg-blue-600 hover:scale-105
+            active:scale-95
+            transition-all duration-150"
+          onClick={decrementCount}
+        >
+          Resolve
+        </button>
+      </div>
     </>
   );
 };
