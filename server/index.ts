@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 let ticketCounts = {
   low: 0,
@@ -19,7 +19,14 @@ app.get("/tickets", (req, res) => {
 });
 
 app.post("/tickets", (req, res) => {
-  ticketCounts = req.body;
+  const { low, medium, high, urgent } = req.body;
+
+  ticketCounts = {
+    low: Number(low) || 0,
+    medium: Number(medium) || 0,
+    high: Number(high) || 0,
+    urgent: Number(urgent) || 0,
+  };
 
   res.json({
     success: true,

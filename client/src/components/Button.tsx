@@ -1,8 +1,9 @@
-import { useState } from "react";
-
 interface ButtonProps {
   color: "green" | "yellow" | "orange" | "red";
   text: string;
+  count: number;
+  onIncrement: () => void;
+  onDecrement: () => void;
 }
 
 const colorMap = {
@@ -24,24 +25,14 @@ const colorMap = {
   },
 };
 
-const Button = ({ color, text }: ButtonProps) => {
+const Button = ({
+  color,
+  text,
+  count,
+  onIncrement,
+  onDecrement,
+}: ButtonProps) => {
   const styles = colorMap[color];
-  const [count, setCount] = useState(0);
-
-  const incrementCount = (e) => {
-    setCount(function (prevCount) {
-      return prevCount + 1;
-    });
-  };
-
-  const decrementCount = (e) => {
-    setCount(function (prevCount) {
-      if (prevCount > 0) {
-        return prevCount - 1;
-      }
-      return 0;
-    });
-  };
   return (
     <>
       <div className="flex flex-col justify-center items-center">
@@ -51,7 +42,7 @@ const Button = ({ color, text }: ButtonProps) => {
             ${styles.hover} hover:scale-105 
             active:scale-95 
             transition-all duration-150`}
-          onClick={incrementCount}
+          onClick={onIncrement}
         >
           {text}
         </button>
@@ -62,7 +53,7 @@ const Button = ({ color, text }: ButtonProps) => {
             hover:bg-blue-600 hover:scale-105
             active:scale-95
             transition-all duration-150"
-          onClick={decrementCount}
+          onClick={onDecrement}
         >
           Resolve
         </button>
