@@ -1,1 +1,10 @@
 electron/node_modules/electron/dist/electron
+electron/dist/Corrigo Widget.AppImage
+.gitignore
+.gitignore
+electron/distWin/win-unpacked/CorrigoWidget.exe
+electron/distWin/CorrigoWidget Setup 1.0.0.exe
+electron/dist/electron_1.0.0_amd64.snap
+electron/dist/linux-unpacked/electron
+electron/dist/linux-unpacked/resources/app.asar
+electron/distWin/win-unpacked/resources/app.asar

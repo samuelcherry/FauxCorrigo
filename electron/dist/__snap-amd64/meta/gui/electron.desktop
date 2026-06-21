@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CorrigoWidget
+Exec=electron %U
+Terminal=false
+Type=Application
+Icon=${SNAP}/meta/gui/icon.png
+StartupWMClass=CorrigoWidget
+Categories=Utility;

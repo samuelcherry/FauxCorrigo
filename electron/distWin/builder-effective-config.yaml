@@ -1,0 +1,13 @@
+directories:
+  output: distWin
+  buildResources: build
+appId: com.samCherry.CorrigoWidget
+productName: CorrigoWidget
+files:
+  - filter:
+      - '**/*'
+win:
+  target: nsis
+linux:
+  target: AppImage
+electronVersion: 42.4.1

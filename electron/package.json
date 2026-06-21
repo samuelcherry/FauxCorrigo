@@ -5,13 +5,31 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "dist": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.samCherry.CorrigoWidget",
+    "productName": "CorrigoWidget",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "directories": {
+      "output": "distWin"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
-    "electron": "^42.4.1"
+  "devDependencies": {
+    "electron": "^42.4.1",
+    "electron-builder": "^24.0.0"
   }
 }
