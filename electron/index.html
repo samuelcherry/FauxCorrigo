@@ -2,15 +2,24 @@
 <html>
   <head>
     <title>Ticket Display</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <h1>Tickets</h1>
-
-    <div>Low: <span id="low">0</span></div>
-    <div>Medium: <span id="medium">0</span></div>
-    <div>High: <span id="high">0</span></div>
-    <div>Urgent: <span id="urgent">0</span></div>
+    <div class="widgetTray">
+      <div class="widget" style="background-color: rgb(39, 210, 39)">
+        Low<span id="low">0</span>
+      </div>
+      <div class="widget" style="background-color: rgb(247, 255, 21)">
+        Medium<span id="medium">0</span>
+      </div>
+      <div class="widget" style="background-color: rgb(255, 149, 0)">
+        High<span id="high">0</span>
+      </div>
+      <div class="widget" style="background-color: rgb(210, 39, 39)">
+        Urgent<span id="urgent">0</span>
+      </div>
+    </div>
 
     <script src="renderer.js"></script>
   </body>
