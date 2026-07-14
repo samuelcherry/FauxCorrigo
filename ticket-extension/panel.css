@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 8px;
+  background: #202124;
+}
+
+.tickets {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tickets {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+
+  user-select: none;
+}
+
+.low {
+  background: #2e7d32;
+  color: white;
+}
+
+.medium {
+  background: #fdd835;
+  color: black;
+}
+
+.high {
+  background: #ef6c00;
+  color: white;
+}
+
+.urgent {
+  background: #c62828;
+  color: white;
+}

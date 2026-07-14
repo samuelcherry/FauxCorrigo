@@ -13,9 +13,16 @@ function createWindow() {
     resizable: false,
     alwaysOnTop: true,
     skipTaskbar: true,
+    focusable: false,
   });
 
   win.loadFile("index.html");
+
+  win.once("ready-to-show", () => {
+    win.show();
+    win.setAlwaysOnTop(true, "screen-saver");
+    win.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+  });
 
   win.setPosition(
     workAreaSize.width - width - 20,

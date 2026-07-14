@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Ticket Counter",
+  "version": "1.0",
+  "permissions": ["sidePanel"],
+  "host_permissions": ["http://localhost:3000/*"],
+  "side_panel": {
+    "default_path": "panel.html"
+  }
+}
