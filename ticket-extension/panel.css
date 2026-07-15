@@ -11,14 +11,10 @@ body {
 .tickets {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  justify-content: space-between;
   gap: 8px;
-}
-
-.tickets {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .circle {
@@ -56,4 +52,16 @@ body {
 .urgent {
   background: #c62828;
   color: white;
+}
+
+.siteName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
