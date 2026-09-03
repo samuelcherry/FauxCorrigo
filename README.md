@@ -9,24 +9,6 @@ It provides a mock data generator (React dashboard + Express backend), alongside
 
 Built as a functional proof of concept for an internal company initiative, FauxCorrigo demonstrates how a persistent Chrome extension and desktop widget can monitor severity-tiered ticket volumes in real time. The included mock backend and control dashboard decouple prototyping from live API dependencies, establishing an end-to-end framework ready for enterprise integration.
 
-## Architecture Overview
-
-The system consists of four coordinated components:
-┌───────────────────────────┐         ┌───────────────────────────┐
-│     React Dashboard       │ ◄─────► │      Express Server       │
-│  (Manual Ticket Controls) │  HTTP   │   (Mock API / State Store)│
-└───────────────────────────┘         └─────────────┬─────────────┘
-│
-Polled Updates / API │
-▼
-┌──────────────────────────────┴──────────────────────────────┐
-│                                                             │
-▼                                                             ▼
-┌─────────────────────────┐                                   ┌─────────────────────────┐
-│    Chrome Extension     │                                   │      Electron App       │
-│  (Browser Quick Monitor)│                                   │  (Standalone Desktop UI)│
-└─────────────────────────┘                                   └─────────────────────────┘
-
 ### Components
 
 1. **Mock API Backend (`Express`)**: Serves simulated ticket endpoints, persists/updates in-memory ticket states, and supports ticket increment/decrement mutations.
@@ -52,9 +34,11 @@ Polled Updates / API │
 ├── client/             # React dashboard for controlling ticket counts
 ├── ticket-extension/   # Manifest, background scripts, and popup UI
 └── electron/           # Electron wrapper and desktop client
+```
 
-
-Getting StartedPrerequisitesEnsure you have the following installed:Express (v16.x or later recommended)npm or yarnGoogle Chrome (for loading unpacked extensions)1. Start the Backend APIBashcd backend
+## Quick Start ##
+Prerequisites
+Ensure you have the following installed:Express (v16.x or later recommended)npm or yarnGoogle Chrome (for loading unpacked extensions)1. Start the Backend APIBashcd backend
 npm install
 npm start
 The API server typically starts at http://localhost:5000 (or your configured port).2. Launch the React Control DashboardBashcd frontend
