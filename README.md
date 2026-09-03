@@ -38,15 +38,23 @@ Built as a functional proof of concept for an internal company initiative, FauxC
 
 ## Quick Start ##
 Prerequisites
-Ensure you have the following installed:Express (v16.x or later recommended)npm or yarnGoogle Chrome (for loading unpacked extensions)1. Start the Backend APIBashcd backend
+Ensure you have the following installed:Express (v16.x or later recommended)npm or yarnGoogle Chrome (for loading unpacked extensions)
+
+1. Start the Backend APIBashcd backend
 npm install
 npm start
-The API server typically starts at http://localhost:5000 (or your configured port).2. Launch the React Control DashboardBashcd frontend
+The API server typically starts at http://localhost:5000 (or your configured port).
+
+2. Launch the React Control DashboardBashcd frontend
 npm install
 npm start
-Runs the dashboard locally at http://localhost:3000. Use the UI buttons to simulate incoming tickets or resolve existing ones across severity tiers.3. Install the Chrome ExtensionOpen Google Chrome and navigate to chrome://extensions/.Enable Developer mode via the toggle switch in the top-right corner.Click Load unpacked.Select the chrome-extension/ directory from this repository.Pin the extension to your toolbar to view ticket metrics update in real time.4. Run the Electron Desktop AppBashcd desktop-app
+Runs the dashboard locally at http://localhost:3000. Use the UI buttons to simulate incoming tickets or resolve existing ones across severity tiers.
+
+3. Install the Chrome ExtensionOpen Google Chrome and navigate to chrome://extensions/.Enable Developer mode via the toggle switch in the top-right corner.Click Load unpacked.Select the chrome-extension/ directory from this repository.Pin the extension to your toolbar to view ticket metrics update in real time.4. Run the Electron Desktop AppBashcd desktop-app
 npm install
 npm start
+
+## Usage ##
 API Endpoints (Mock Server)MethodEndpointDescriptionGET/api/ticketsReturns the current tally of tickets grouped by severityPOST/api/tickets/incrementIncrements ticket count for a specified severity levelPOST/api/tickets/decrementDecrements ticket count for a specified severity levelPOST/api/tickets/resetResets ticket counters to zero or default baselineExample Response (GET /api/tickets):JSON{
   "urgent": 2,
   "high": 5,
