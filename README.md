@@ -5,6 +5,9 @@ A full-stack ticket tracking simulation and monitoring suite. **FauxCorrigo** mo
 It provides a mock data generator (React dashboard + Express backend), alongside two multi-platform clients (a Google Chrome extension and an Electron desktop app) that monitor ticket counts segmented by severity in real time.
 
 ---
+## Motivations ##
+
+Built as a functional proof of concept for an internal company initiative, FauxCorrigo demonstrates how a persistent Chrome extension and desktop widget can monitor severity-tiered ticket volumes in real time. The included mock backend and control dashboard decouple prototyping from live API dependencies, establishing an end-to-end framework ready for enterprise integration.
 
 ## Architecture Overview
 
