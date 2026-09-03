@@ -55,15 +55,63 @@ npm install
 npm start
 
 ## Usage ##
-API Endpoints (Mock Server)MethodEndpointDescriptionGET/api/ticketsReturns the current tally of tickets grouped by severityPOST/api/tickets/incrementIncrements ticket count for a specified severity levelPOST/api/tickets/decrementDecrements ticket count for a specified severity levelPOST/api/tickets/resetResets ticket counters to zero or default baselineExample Response (GET /api/tickets):JSON{
+API Endpoints (Mock Server)MethodEndpointDescriptionGET/api/tickets
+Returns the current tally of tickets grouped by severity
+
+POST/api/tickets/increment
+
+Increments ticket count for a specified severity level
+
+POST/api/tickets/decrementDecrements ticket count for a specified severity level
+
+POST/api/tickets/resetResets ticket counters to zero or default baseline
+
+Example Response (GET /api/tickets):
+
+JSON{
   "urgent": 2,
   "high": 5,
   "medium": 12,
   "low": 8,
   "lastUpdated": "2026-09-03T17:40:00Z"
 }
-Future Enhancements[ ] Add WebSocket support for instant push notifications instead of interval polling.[ ] Implement badge alerts on the Chrome extension icon for Urgent severity spikes.[ ] Add basic authentication and persistent storage (SQLite/MongoDB) for simulated ticket histories.LicenseThis project is licensed under the MIT License.
+
+
+##Future Enhancements##
+[ ] Add WebSocket support for instant push notifications instead of interval polling.
+[ ] Implement badge alerts on the Chrome extension icon for Urgent severity spikes.
+[ ] Add basic authentication and persistent storage (SQLite/MongoDB) for simulated ticket histories.
+
+## License ## 
+
+This project is licensed under the MIT License.
 <ElicitationsGroup message="If you'd like to refine this further:">
   <Elicitation label="Add real commands and folder names" query="Can I provide my actual folder names, ports, and API routes so you can plug them directly into the README?"/>
   <Elicitation label="Draft a Quick Demo / GIF section" query="Help me write a 'Demo & Visuals' section with markdown placeholders for screenshots and GIFs."/>
 </ElicitationsGroup>
+
+
+## 🤝 Contributing ##
+
+### Clone the repo
+
+```bash
+git clone https://github.com/xyz/zipzod@latest
+cd zipzod
+```
+
+### Build the compiled binary
+
+```bash
+go build
+```
+
+### Run the test suite
+
+```bash
+go test ./...
+```
+
+### Submit a pull request
+
+If you'd like to contribute, please fork the repository and open a pull request to the `main` branch.
